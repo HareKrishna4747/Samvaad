@@ -24,8 +24,8 @@ import google.generativeai as genai
 from dotenv import load_dotenv
 import os
 import openai
-OPENAI_API_KEY = os.os.environ.get('openai')
-openai.api_key = os.os.environ.get('openai')
+OPENAI_API_KEY = os.environ.get('openai')
+openai.api_key = os.environ.get('openai')
 load_dotenv()
 # Initialize OpenAI embeddings and chat model
 embeddings = OpenAIEmbeddings(openai_api_key=os.getenv('openai'))
