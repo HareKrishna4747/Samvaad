@@ -24,11 +24,11 @@ import google.generativeai as genai
 from dotenv import load_dotenv
 import os
 import openai
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-openai.api_key = OPENAI_API_KEY
+OPENAI_API_KEY = "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"
+openai.api_key = "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"
 load_dotenv()
 # Initialize OpenAI embeddings and chat model
-embeddings = OpenAIEmbeddings(openai_api_key=OPENAI_API_KEY)
+embeddings = OpenAIEmbeddings(openai_api_key="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")
 model = ChatOpenAI(model="gpt-3.5-turbo", temperature=0.3, openai_api_key=OPENAI_API_KEY)
 # Function to extract text from PDFs
 def get_pdf_text(pdf_paths):
