@@ -13,6 +13,6 @@
     }
   ],
   "env": {
-    "OPENAI_API_KEY": "@openai"
+    "OPENAI_API_KEY": "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"
   }
 }
