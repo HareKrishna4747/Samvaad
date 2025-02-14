@@ -29,7 +29,7 @@ openai.api_key = os.environ.get('openai')
 load_dotenv()
 # Initialize OpenAI embeddings and chat model
 embeddings = OpenAIEmbeddings(openai_api_key=os.getenv('openai'))
-model = ChatOpenAI(model="gpt-4", temperature=0.3, openai_api_key=OPENAI_API_KEY)
+model = ChatOpenAI(model="gpt-3.5-turbo", temperature=0.3, openai_api_key=OPENAI_API_KEY)
 # Function to extract text from PDFs
 def get_pdf_text(pdf_paths):
     text = ""
@@ -42,7 +42,7 @@ def get_pdf_text(pdf_paths):
 
 # Function to split text into smaller chunks
 def get_text_chunks(text):
-    text_splitter = RecursiveCharacterTextSplitter(chunk_size=2000, chunk_overlap=200)
+    text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=100)
     return text_splitter.split_text(text)
 
 # Function to create and store FAISS vector database
