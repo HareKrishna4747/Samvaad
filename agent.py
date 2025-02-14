@@ -42,7 +42,7 @@ def get_pdf_text(pdf_paths):
 
 # Function to split text into smaller chunks
 def get_text_chunks(text):
-    text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=100)
+    text_splitter = RecursiveCharacterTextSplitter(chunk_size=2000, chunk_overlap=200)
     return text_splitter.split_text(text)
 
 # Function to create and store FAISS vector database
