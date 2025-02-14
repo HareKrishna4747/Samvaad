@@ -29,7 +29,7 @@ openai.api_key = os.environ.get('openai')
 load_dotenv()
 # Initialize OpenAI embeddings and chat model
 embeddings = OpenAIEmbeddings(openai_api_key=os.getenv('openai'))
-model = ChatOpenAI(model="gpt-3.5-turbo", temperature=0.3, openai_api_key=OPENAI_API_KEY)
+model = ChatOpenAI(model="gpt-4", temperature=0.3, openai_api_key=OPENAI_API_KEY)
 # Function to extract text from PDFs
 def get_pdf_text(pdf_paths):
     text = ""
